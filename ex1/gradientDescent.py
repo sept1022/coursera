@@ -21,7 +21,12 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         #       of the cost function (computeCost) and gradient here.
         #
 
+        print theta, computeCost(X, y, theta)
 
+        origin_theta = theta
+        h = X.dot(origin_theta)
+        for index in xrange(len(theta)):
+           theta[index] -= alpha / m * sum((h-y) * X[:, index])
         # ============================================================
 
         # Save the cost J in every iteration

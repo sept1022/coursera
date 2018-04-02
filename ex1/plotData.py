@@ -19,5 +19,8 @@ def plotData(data):
 #       markers larger by using plot(..., 'rx', 'MarkerSize', 10);
 
     plt.figure()  # open a new figure window
-
+    plt.plot(data[..., 0], data[..., 1], 'rx', markersize=10)
+    plt.xlabel('Ppulation size in 10,000s')
+    plt.ylabel('Profit in $10,000s')
+    plt.show(block=False)
 # ============================================================

@@ -53,7 +53,6 @@ y = data[:, 1]
 # Note: You have to complete the code in plotData.py
 print 'Plotting Data ...'
 plotData(data)
-show()
 
 raw_input("Program paused. Press Enter to continue...")
 
@@ -66,7 +65,8 @@ J = computeCost(X, y, theta)
 print 'cost: %0.4f ' % J
 
 # Some gradient descent settings
-iterations = 1500
+#iterations = 1500
+iterations = 100
 alpha = 0.01
 
 # run gradient descent
@@ -77,11 +77,10 @@ print 'Theta found by gradient descent: '
 print '%s %s \n' % (theta[0], theta[1])
 
 # Plot the linear fit
-plt.figure()
-plotData(data)
+#plt.figure()
 plt.plot(X[:, 1], X.dot(theta), '-', label='Linear regression')
 plt.legend(loc='upper right', shadow=True, fontsize='x-large', numpoints=1)
-show()
+#show()
 
 raw_input("Program paused. Press Enter to continue...")
 
@@ -123,7 +122,7 @@ ax.set_ylabel(r'$\theta_1$')
 ax.set_zlabel(r'J($\theta$)')
 show()
 
-raw_input("Program paused. Press Enter to continue...")
+raw_input("22. Program paused. Press Enter to continue...")
 
 # Contour plot
 plt.figure()
@@ -134,7 +133,7 @@ plt.clabel(ax, inline=1, fontsize=10)
 plt.xlabel(r'$\theta_0$')
 plt.ylabel(r'$\theta_1$')
 plt.plot(0.0, 0.0, 'rx', linewidth=2, markersize=10)
-show()
+#show()
 
 raw_input("Program paused. Press Enter to continue...")
 
